@@ -149,7 +149,6 @@ def add_comment(request, post_id):
     )
 
 
-@login_required
 def user_profile(request, username):
     user = get_object_or_404(User, username=username)
     return render(request, "blog/profile.html", {"profile": user})
